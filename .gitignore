@@ -1,0 +1,5 @@
+/nine_night/bin/Debug/*
+
+/nine_night/obj/*
+
+/nine_night/appsettings.json

@@ -1,0 +1,12 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "local": "Server=LAPTOP-EFV4KPTQ;Database=nine_night;Trusted_Connection=true;TrustServerCertificate=true;"
+  }
+}
