@@ -25,7 +25,7 @@ namespace nine_night.Service
             userDBService = userRepository;
         }
 
-        private readonly SqlConnection conn = new SqlConnection(cnstr);
+      
 
         #region
         public void Register(User newMember)
