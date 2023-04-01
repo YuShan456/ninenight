@@ -16,7 +16,7 @@ namespace nine_night.Controllers
             userDBService = userRepository;
         }
 
- 
+
         [HttpGet]
         [Route("text")]
         public string user(int id)
