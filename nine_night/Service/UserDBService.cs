@@ -15,18 +15,26 @@ namespace nine_night.Service
 {
     public class UserDBService
     {
-       
 
-        // Constructor injection   
-        private  readonly SqlConnection userDBService;
-
-        public UserDBService(SqlConnection userRepository)
+        private readonly IConfiguration configuration;
+        public UserDBService(IConfiguration Configuration)
         {
-            userDBService = userRepository;
+            configuration = Configuration;
         }
 
-      
 
+        string connectString = configuration.GetConnectionString("nine-night");
+
+
+        private readonly static string cnstr = ConfigurationManager.
+        ConnectionStrings["nine-night"].ConnectionString;
+        // 建立與資料庫的連線
+        private readonly SqlConnection conn = new SqlConnection(cnstr);
+
+        // Constructor injection   
+        private readonly SqlConnection userDBService;
+
+      
         #region
         public void Register(User newMember)
         {//將密碼Hash過
